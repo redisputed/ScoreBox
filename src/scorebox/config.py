@@ -1,12 +1,13 @@
 #!/usr/bin/python
 from configparser import ConfigParser
+from typing import Dict
 
 
-def config(filename='./src/scorebox/database.ini', section='postgresql'):
-    parser = ConfigParser()
+def config(filename: str = './configs/database.ini', section: str = 'postgresql') -> Dict[str, str]:
+    parser: ConfigParser = ConfigParser()
     parser.read(filename)
 
-    db = {}
+    db: Dict[str, str] = {}
     if parser.has_section(section):
         params = parser.items(section)
         for param in params:

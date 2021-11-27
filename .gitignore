@@ -1,4 +1,4 @@
-src/scorebox/database.ini
+configs/database.ini
 
 # template .gitignore
 # Byte-compiled / optimized / DLL files
